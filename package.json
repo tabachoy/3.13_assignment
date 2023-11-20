@@ -1,0 +1,25 @@
+{
+  "name": "3.12_activity",
+  "version": "1.0.0",
+  "description": "Activities for today\r ```\r git clone\r ```\r ```\r git add\r ```\r ```\r git commit\r ```\r ```\r git push\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabachoy/3.12_Activity.git"
+  },
+  "author": "emmanuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabachoy/3.12_Activity/issues"
+  },
+  "homepage": "https://github.com/tabachoy/3.12_Activity#readme",
+  "dependencies": {
+    "serverless": "^3.36.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.2.1"
+  }
+}
