@@ -26,7 +26,7 @@ jobs:
 
       # Firstly, insert your secrets in AWS Secret Manager
       # Then, you can retrieve the secrets based on your secret-id
-      # If you have multiple secret key and value pairs like mine, you can parse
+      # If you have multiple secret key and value pairs like mine, you can parse 
       # the entire json object and print the values you'd like to display/use
 
       - name: Get Secret Object
