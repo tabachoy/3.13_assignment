@@ -1,4 +1,4 @@
-service: new_emmanuel-serverless
+service: new-emmanuel-serverless
 frameworkVersion: 3
 
 provider:
