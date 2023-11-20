@@ -31,16 +31,16 @@ jobs:
 
       - name: Get Secret Object
         run: |
-          secret_object=$(aws secretsmanager get-secret-value --secret-id prod/database/mysql --query SecretString --output json)
+          secret_object=$(aws secretsmanager get-secret-value --secret-id prod/emmanue_secret/my_secret --query SecretString --output json)
 
           # Parse specific keys from the secret object
-          secret_value_hobby=$(echo "$secret_object" | jq -r '. | fromjson | .luqman_hobby')
-          secret_value_food=$(echo "$secret_object" | jq -r '. | fromjson | .luqman_food')
-          secret_value_loc=$(echo "$secret_object" | jq -r '. | fromjson | .luqman_location')
+          secret_place_value=$(echo "$secret_object" | jq -r '. | fromjson | .secret_place')
+          secret_drink_value=$(echo "$secret_object" | jq -r '. | fromjson | .secret_drink')
+          secret_illness_value=$(echo "$secret_object" | jq -r '. | fromjson | .secret_illness')
 
-          echo "Secret value Hobby is: $secret_value_hobby"
-          echo "Secret value Food is: $secret_value_food"
-          echo "Secret value Location is: $secret_value_loc"
+          echo "Secret place value is: $secret_place_value"
+          echo "Secret drink value is: $secret_drink_value"
+          echo "Secret illness value is: $secret_illness_value"
 
   retrieve_parameters:
     runs-on: ubuntu-latest
